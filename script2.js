@@ -1,92 +1,100 @@
-let input1 = document.querySelector('.input1')
-let input2 = document.querySelector('.input2')
-let res = document.querySelector('.res')
-
-let form = document.querySelector('.form')
+let input1 = $('.input1');
+let input2 = $('.input2');
+let res = $('.res');
 
 
 
 
 
 
-document.querySelector('.somar').addEventListener('click',()=>{
 
-    let num1 = parseInt(input1.value)
-    let num2 = parseInt(input2.value)
-    let soma = num1 + num2 
+$('.somar').click(()=>{
+
+    let num1 = parseInt(input1.val());
+    let num2 = parseInt(input2.val());
+    let soma = num1 + num2 ;
+
     
-    if(input1.value != '' && input2.value != ''){
+    
+    if(num1 != '' && num2 != ''){
        
-        res.innerHTML = soma
-        input1.value = ''
-        input2.value = ''
+        res.html(soma);
+        input1.val('') ;
+        input2.val('') ;
 
     }else{
-        alert("O resultado foi de vasco")
+        alert("O resultado foi de vasco");
     }
-
+  
   
 })
 
 
-document.querySelector('.diminuir').addEventListener('click',()=>{
+$('.diminuir').click(()=>{
 
   
 
-    let num1 = parseInt(input1.value)
-    let num2 = parseInt(input2.value)
-    let subitracao = num1 - num2 
+    let num1 = parseInt(input1.val());
+    let num2 = parseInt(input2.val());
+    let subitracao = num1 - num2 ;
     
-    if(input1.value != '' && input2.value != ''){
+    if(num1 != '' && num2 != ''){
        
-        res.innerHTML = subitracao
-        input1.value = ''
-        input2.value = ''
+        res.html(subitracao);
+        input1.val('') ;
+        input2.val('') ;
       
     }else{
-        alert("O resultado foi de vasco")
+        alert("O resultado foi de vasco");
     }
 })
 
 
-document.querySelector('.multiplicar').addEventListener('click',()=>{
+$('.multiplicar').click(()=>{
 
   
 
-    let num1 = parseInt(input1.value)
-    let num2 = parseInt(input2.value)
-    let subitracao = num1 * num2 
+    let num1 = parseInt(input1.val());
+    let num2 = parseInt(input2.val());
+    let multiplicar = num1 * num2 ;
     
-    if(input1.value != '' && input2.value != ''){
+    if( num1 != '' && num2 != ''){
        
-        res.innerHTML = subitracao
-        input1.value = ''
-        input2.value = ''
+        res.html(multiplicar) ;
+        input1.val('');
+        input2.val('') ;
       
     }else{
-        alert("O resultado foi de vasco")
+        alert("O resultado foi de vasco") ;
     }
 })
 
-document.querySelector('.dividir').addEventListener('click',()=>{
+$('.dividir').click(()=>{
 
   
 
-    let num1 = parseInt(input1.value)
-    let num2 = parseInt(input2.value)
-    let subitracao = num1 / num2 
+    let num1 = parseInt(input1.val()) ;
+    let num2 = parseInt(input2.val());
+    let divisao = num1 / num2 ;
     
-    if(input1.value != '' && input2.value != ''){
+    if( num1 != '' && num2 != ''){
        
-        res.innerHTML = subitracao
-        input1.value = ''
-        input2.value = ''
+        res.html(divisao) ;
+        input1.val('');
+        input2.val('');
       
     }else{
-        alert("O resultado foi de vasco")
+        alert("O resultado foi de vasco");
     }
 })
 
+
+$('.button2').click(()=>{
+
+    let input3 = $(".input3") ;
+    $('.isaac').html(input3.val()) ;
+    input3.val("");
+})
 
 
 
